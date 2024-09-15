@@ -740,8 +740,8 @@ GameObject:
   - component: {fileID: 654561742}
   - component: {fileID: 654561745}
   - component: {fileID: 654561744}
-  - component: {fileID: 654561748}
   - component: {fileID: 654561747}
+  - component: {fileID: 654561748}
   m_Layer: 5
   m_Name: ConnectionButtons
   m_TagString: Untagged
@@ -820,8 +820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serverBttn: {fileID: 2090623358}
-  clientBttn: {fileID: 48287705}
-  hostBttn: {fileID: 503030299}
+  clientBttn: {fileID: 503030299}
+  hostBttn: {fileID: 48287705}
 --- !u!114 &654561748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,13 +1156,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.040947296, y: -0.9962643, z: 0.003122323, w: 0.075967394}
-  m_LocalPosition: {x: 0.49, y: 1, z: 10.39}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -171.279, z: 4.707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1730698331
 GameObject:
   m_ObjectHideFlags: 0
