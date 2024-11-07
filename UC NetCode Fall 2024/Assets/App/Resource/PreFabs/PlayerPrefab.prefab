@@ -241,8 +241,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7337625572796954842}
   serializedVersion: 2
+feature/JBM/module8
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.13000011, y: 0.571, z: 0.34}
+
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13, y: 0.509, z: 0.408}
+ main
   m_LocalScale: {x: 0.5713778, y: 0.33831295, z: 0.3161494}
   m_ConstrainProportionsScale: 0
   m_Children: []
