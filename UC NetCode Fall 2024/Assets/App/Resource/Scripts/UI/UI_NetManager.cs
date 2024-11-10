@@ -8,7 +8,7 @@ using System;
 public class UI_NetManager : NetworkBehaviour
 {
     [SerializeField] private Button serverBttn, clientBttn, hostBttn, startBttn;
-    [SerializeField] private GameObject _connetionBttnGroup;
+    [SerializeField] private GameObject _connetionBttnGroup, _socialPanel;
 
     [SerializeField] private SpawnController _mySpawnController;
     void Start()
@@ -25,9 +25,15 @@ public class UI_NetManager : NetworkBehaviour
         if (IsServer)
         {
             _mySpawnController.SpawnAllPlayers();
-            startBttn.gameObject.SetActive(false);
+            HideGuiRpc();
         }
         
+    }
+
+    [Rpc(target:SendTo.Everyone)]
+    private void HideGuiRpc()
+    {
+        _socialPanel.SetActive(false);
     }
 
     private void ServerClick()
