@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-using Newtonsoft.Json.Bson;
 
 public class PlayerLabel : MonoBehaviour
 {
