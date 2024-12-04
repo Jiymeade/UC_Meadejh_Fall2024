@@ -15,13 +15,13 @@ namespace App.Resource.Script.Obj
             base.OnNetworkSpawn();
             if (IsServer)
             {
-                StartCoroutine(methodName: "TriggerFuse");
+                StartCoroutine("TriggerFuse");
             }
         }
 
         private IEnumerator TriggerFuse()
         {
-            Debug.Log(message: "Fuse List");
+            Debug.Log("Fuse List");
             yield return new WaitForSeconds(_fuseTimer);
             TriggerExplosionRpc();
         }
@@ -31,7 +31,7 @@ namespace App.Resource.Script.Obj
         {
             NetworkObject explosive = NetworkManager.Instantiate(ExplosionPrefab, transform.position, transform.rotation);
 
-            ExplosionPrefab.Spawn(destroyWithScene: true);
+            explosive.Spawn(true);
             this.NetworkObject.Despawn();
         }
 

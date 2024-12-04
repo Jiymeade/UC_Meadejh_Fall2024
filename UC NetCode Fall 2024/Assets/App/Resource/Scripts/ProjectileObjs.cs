@@ -17,13 +17,13 @@ namespace App.Resource.Scripts.obj
         {
             base.OnNetworkSpawn();
             GetComponent<Rigidbody>().velocity = this.transform.forward * _speed;
-            StartCoroutine(routine: AutoDestruct());
+            StartCoroutine("AutoDestruct");
 
         }
 
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.tag.Equals("Player") && other.gameObject.GetComponent<NetworkObject>().OwnerClientId != this.OwnerClientId) ;
+            if (other.gameObject.tag.Equals("Player") && other.gameObject.GetComponent<NetworkObject>().OwnerClientId != this.OwnerClientId)
             {
                 other.gameObject.GetComponent<HealthNetScript>().DamageObjRpc(_damage);
             }

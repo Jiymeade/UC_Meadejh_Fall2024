@@ -28,7 +28,7 @@ public class TntSpawner : NetworkBehaviour
     public void SpawnTntRpc()
     {
         NetworkObject tnt = NetworkManager.Instantiate(Tnt, transform.position, transform.rotation);
-        tnt.Spawn(destroyWithScene: true);
+        tnt.Spawn(true);
     }
         
 }

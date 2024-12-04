@@ -14,8 +14,8 @@ public class ServerPlayerMovements : NetworkBehaviour
     [SerializeField] private BulletSpawnerScript _bulletSpawner;
     public CharacterController _CC;
     private MyPlayerInputActions _playerInput;
-    private static readonly int IsSprinting = Animator.StringToHash(name: "IsSprinting");
-    private static readonly int IsWalking = Animator.StringToHash(name: "IsWalking");
+    private static readonly int IsSprinting = Animator.StringToHash("isSprinting");
+    private static readonly int IsWalking = Animator.StringToHash("IsWalking");
     Vector3 _moveDirection = new Vector3(x: 0, y: 0f, z: 0);
 
     // Start is called before the first frame update
@@ -71,19 +71,19 @@ public class ServerPlayerMovements : NetworkBehaviour
         if (isJumping) { _myNetAnimator.SetTrigger("JumpTrigger"); }
         if(isPunching){_myNetAnimator.SetTrigger("PunchTrigger"); }
 
-       _myAnimator.SetBool(id:IsSprinting, isSprinting);
+       _myAnimator.SetBool(IsSprinting, isSprinting);
 
         if (_input.x == 0f && _input.y == 0f) return;
 
         if (isSprinting)
         {
 
-            _CC.Move(motion:_moveDirection * (_pSpeed * 1.3f * Time.deltaTime));
+            _CC.Move(_moveDirection * (_pSpeed * 1.3f * Time.deltaTime));
         }
         else
         {
 
-            _CC.Move(motion:_moveDirection * (_pSpeed * Time.deltaTime));
+            _CC.Move(_moveDirection * (_pSpeed * Time.deltaTime));
         }
       
         transform.forward = _moveDirection;

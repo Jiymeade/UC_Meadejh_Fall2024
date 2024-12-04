@@ -56,7 +56,7 @@ namespace App.Resource.Scripts.Player
             if (!_canDamage) return;
             _Health.Value -= dmg;
             StartCoroutine(nameof(DamageCooldown));
-            Debug.Log(message: $"Damage recieved : {dmg}");
+            Debug.Log( $"Damage recieved : {dmg}");
         }
 
         private IEnumerable DamageCooldown()

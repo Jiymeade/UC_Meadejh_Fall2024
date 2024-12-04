@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8522110692558388965}
-  m_Father: {fileID: 6358659849133563081}
+  m_Father: {fileID: 5550459202470631883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2517535542025941604
 GameObject:
@@ -379,6 +379,7 @@ Transform:
   - {fileID: 5771420898404680044}
   - {fileID: 3630469264945788405}
   - {fileID: 1442081158026235067}
+  - {fileID: 2745952176721325536}
   m_Father: {fileID: 6358659849133563081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6847451705968260432
@@ -629,9 +630,10 @@ GameObject:
   - component: {fileID: 4093609751868402524}
   - component: {fileID: 5422158598847926500}
   - component: {fileID: 6178189287733171030}
+  - component: {fileID: 4381181708655039827}
   m_Layer: 0
   m_Name: ServerPlayerPrefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,7 +652,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5550459202470631883}
-  - {fileID: 2745952176721325536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2066478922998098041
@@ -852,3 +853,30 @@ MonoBehaviour:
     m_InternalValue: 4
   _startingPoint: {fileID: 3630469264945788405}
   _ProjectilePrefab: {fileID: 7064046937298723715, guid: ba233be46ac16344f8c216d57fd93ea7, type: 3}
+--- !u!54 &4381181708655039827
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188144949171733086}
+  serializedVersion: 4
+  m_Mass: 4
+  m_Drag: 4
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 90
+  m_CollisionDetection: 1
