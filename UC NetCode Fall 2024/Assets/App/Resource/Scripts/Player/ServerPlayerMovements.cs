@@ -14,7 +14,7 @@ public class ServerPlayerMovements : NetworkBehaviour
     [SerializeField] private BulletSpawnerScript _bulletSpawner;
     public CharacterController _CC;
     private MyPlayerInputActions _playerInput;
-    private static readonly int IsSprinting = Animator.StringToHash("isSprinting");
+    private static readonly int IsSprinting = Animator.StringToHash("IsSprinting");
     private static readonly int IsWalking = Animator.StringToHash("IsWalking");
     Vector3 _moveDirection = new Vector3(x: 0, y: 0f, z: 0);
 

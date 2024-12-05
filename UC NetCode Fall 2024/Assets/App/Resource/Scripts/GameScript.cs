@@ -29,13 +29,21 @@ namespace App.Resource.Scripts
 
         public void PlayerDeathRpc(RpcParams rpcParams = default)
         {
-            _currentPlayers.Remove(rpcParams.Receive.SenderClientId);
-            YouLoseRpc(rpcParams: RpcTarget.Single(rpcParams.Receive.SenderClientId, RpcTargetUse.Temp));
-
-            if(_currentPlayers.Count == 1)
+            if (_currentPlayers.Contains(rpcParams.Receive.SenderClientId))
             {
-                YouWinRpc(rpcParams: RpcTarget.Single(_currentPlayers[0], RpcTargetUse.Temp));
+                _currentPlayers.Remove(rpcParams.Receive.SenderClientId);
+
+                YouLoseRpc(rpcParams: RpcTarget.Single(rpcParams.Receive.SenderClientId, RpcTargetUse.Temp));
+
+                if (_currentPlayers.Count == 1)
+                {
+                    YouWinRpc(rpcParams: RpcTarget.Single(_currentPlayers[0], RpcTargetUse.Temp));
+                }
             }
+
+           
+
+           
 
         }
 
