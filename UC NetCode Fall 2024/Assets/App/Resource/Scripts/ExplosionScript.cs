@@ -20,7 +20,7 @@ namespace App.Resource.Scripts.obj
         {
             if (other.gameObject.tag.Equals("Player"))
             {
-                Debug.Log(message: "Player hit!");
+                Debug.Log("Player hit!");
                 other.gameObject.GetComponent<HealthNetScript>().DamageObjRpc(_damage);
             }
         }
