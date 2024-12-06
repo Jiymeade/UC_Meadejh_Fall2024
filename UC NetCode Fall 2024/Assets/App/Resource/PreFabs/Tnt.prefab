@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2554546017480663159}
   m_Layer: 0
   m_Name: Tnt
-  m_TagString: Player
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
